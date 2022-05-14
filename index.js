@@ -28,7 +28,8 @@ var drag = function (element) {
     y = Math.round(y - offset[1])
 
     // setPosition throws error if called with -0
-    remote.getCurrentWindow().setPosition(x + 0, y + 0)
+    // remote.getCurrentWindow().setPosition(x + 0, y + 0)
+    BrowserWindow.getFocusedWindow().setPosition(x + 0, y + 0)
   })
 
   mouse.on('left-up', function () {
