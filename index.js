@@ -3,6 +3,7 @@ var $ = require('dombo')
 
 var electron = tryRequire('electron')
 var remote = electron ? electron.remote : tryRequire('remote')
+const { BrowserWindow } = require("@electron/remote");
 
 var mouseConstructor = tryRequire('osx-mouse') || tryRequire('win-mouse')
 
